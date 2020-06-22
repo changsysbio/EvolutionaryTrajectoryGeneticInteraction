@@ -6,7 +6,7 @@ function DetermineMutationInteractionModel(input)
     % population. bioRxiv, 2020, https://doi.org/10.1101/2020.01.16.908129
     %
     
-    [passage, abundance, mutantId] = ReadData(input);
+    [passage, abundance, mutantId] = ReadMatrixData(input);
 
     outputDir = [input '_classification'];
     if ( exist(outputDir, 'dir') ~= 7 )
@@ -42,31 +42,4 @@ function DetermineMutationInteractionModel(input)
 
         close 1;
     end
-end
-
-function [passage, abundance, mutantId] = ReadData(input)
-
-    mutantStartId = '0';
-    mutantIdPattern = '\d';
-    splitPattern = '\t';
-
-    fid = fopen(input);
-
-    headerline = fgetl(fid);
-    headers = regexp(headerline, splitPattern, 'split');
-    genomeStartPosition = find(strcmp(headers, mutantStartId));
-    for index = genomeStartPosition : length(headers)
-        if regexp(headers{index}, mutantIdPattern)
-            genomeEndPosition = index;
-        else
-            break;
-        end
-    end
-
-    data = textscan(fid, [repmat(['%f' splitPattern], 1, genomeEndPosition)], ...
-        'headerlines', 1);
-    passage = data{1};
-    abundance = data(genomeStartPosition:genomeEndPosition);
-    mutantId = headers(genomeStartPosition:genomeEndPosition);
-    
 end
