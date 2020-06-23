@@ -52,11 +52,15 @@ in the terminal of MATLAB, where *inputFilename* is the filename/path of the inp
 
 [Mutation 50 from Sample data set 1, fitness=1.0, with hitchhiking](https://drive.google.com/file/d/1URKrHTJdcSAdm-2YXGuRq0BhXU8y9sHH/view?usp=sharing)
 
+[Mutation 22 from Sample data set 2, fitness=0.9 to 0.6, negative epistasis](https://drive.google.com/file/d/1WKSOmEMmBQJKOYNqvWPzR35VICVYhcD4/view?usp=sharing)
+
+[Mutation 557 from Sample data set 2, fitness=0.6 to 0.9, positive epistasis](https://drive.google.com/file/d/1sc_hQNKURTovA3DRWEzqJrgjoErwXgmz/view?usp=sharing)
+
 * A txt file with the mutation classification information.
 
-Example mutation classification information for Sample dataset 1: simulation_neutral_3.trajectory.classification_summary.txt
+Example mutation classification information for Sample dataset 1: [simulation_neutral_3.trajectory.classification_summary.txt](https://drive.google.com/file/d/1njuNt9IVOOpSeE4VScJNPWThOyL_tvG8/view?usp=sharing)
 
-Example mutation classification information for Sample dataset 2: simulation_epistasis_38.trajectory.classification_summary.txt
+Example mutation classification information for Sample dataset 2: [simulation_epistasis_38.trajectory.classification_summary.txt](https://drive.google.com/file/d/1JPwlGM0WpDp0AEnoc7uKCgNaaBgZfvaV/view?usp=sharing)
 
 Since the initialization of the parameters are random, the outcome of different runs might be slightly different but will be very similar.
 
